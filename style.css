@@ -1,0 +1,340 @@
+/* ================== НАВИГАЦИЯ ================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+
+    background: rgba(10, 10, 15, 0.9);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff2e63;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #08f7fe;
+    text-shadow: 0 0 10px #08f7fe;
+}
+
+/* ================== ОБЛОЖКА ================== */
+
+.hero {
+    height: 100vh;
+
+    /* ФОН ОБЛОЖКИ:
+       👉 сюда можно поставить свою картинку:
+       url("images/hero.jpg")
+    */
+    background: url("ss_97ce80b071cef0bbc6b81c789c53de5bb7b9da6c.1920x1080.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* затемнение поверх фона */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.6);
+}
+
+/* текст поверх затемнения */
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+}
+
+/* заголовок */
+.hero h1 {
+    font-size: 40px;
+    color: #ff2e63;
+    margin: 0;
+}
+
+/* текст */
+.hero p {
+    font-size: 18px;
+    color: white;
+}
+
+/* кнопка */
+.hero-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    background: #08f7fe;
+    color: black;
+    text-decoration: none;
+
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    box-shadow: 0 0 15px #08f7fe;
+}
+
+/* ================== ОБО МНЕ ================== */
+
+.about {
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #14141f;
+    color: white;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #08f7fe;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ================== ХОББИ ================== */
+
+.hobbies {
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #0b0b10;
+    color: white;
+}
+
+.hobbies h2 {
+    font-size: 32px;
+    color: #ff2e63;
+    margin-bottom: 30px;
+}
+
+/* контейнер карточек */
+.hobby-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* карточка хобби */
+.hobby-item {
+    background: #14141f;
+    padding: 15px 20px;
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    border: 1px solid #08f7fe;
+
+    transition: 0.3s;
+}
+
+/* эффект при наведении */
+.hobby-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #08f7fe;
+}
+
+/* ================== НАВЫКИ ================== */
+
+.skills {
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #14141f;
+    color: white;
+}
+
+.skills h2 {
+    font-size: 32px;
+    color: #08f7fe;
+    margin-bottom: 15px;
+}
+
+.skills-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* список навыков */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* карточка навыка */
+.skill {
+    background: #0b0b10;
+    padding: 15px 20px;
+    border-radius: 12px;
+
+    border: 1px solid #ff2e63;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+/* эффект при наведении */
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff2e63;
+}
+
+/* ================== РАБОТЫ ================== */
+
+.works {
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #0b0b10;
+    color: white;
+}
+
+.works h2 {
+    font-size: 32px;
+    color: #ff2e63;
+    margin-bottom: 10px;
+}
+
+.works-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* галерея */
+.works-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* картинки работ */
+.works-gallery img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 2px solid #08f7fe;
+
+    transition: 0.3s;
+}
+
+/* эффект наведения */
+.works-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #08f7fe;
+}
+
+/* ================== КОНТАКТЫ ================== */
+
+.contacts {
+    padding: 80px 20px;
+    text-align: center;
+
+    background-color: #14141f;
+    color: white;
+}
+
+.contacts h2 {
+    font-size: 32px;
+    color: #08f7fe;
+    margin-bottom: 10px;
+}
+
+.contacts-text {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+/* блок с контактами */
+.contacts-box {
+    display: inline-block;
+    text-align: left;
+
+    background: #0b0b10;
+    padding: 20px;
+    border-radius: 12px;
+
+    border: 1px solid #ff2e63;
+}
+
+.contacts-box p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* ================== ФУТЕР ================== */
+
+.footer {
+    padding: 30px 20px;
+    text-align: center;
+
+    background-color: #0b0b10;
+    color: white;
+
+    border-top: 1px solid #14141f;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* дополнительный текст */
+.footer-text {
+    opacity: 0.6;
+    font-size: 14px;
+}
